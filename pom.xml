@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<properties>
+		<spring-context-groupId>org.springframework</spring-context-groupId>
+	</properties>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>filippos.bagordakis</groupId>
+	<artifactId>agora-common</artifactId>
+	<version>0.0.1</version>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.15.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>32.1.2-jre</version>
+		</dependency>
+	
+	</dependencies>
+</project>
