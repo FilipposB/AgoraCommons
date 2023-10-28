@@ -8,31 +8,54 @@ public class RequestDTO extends BaseDTO {
 
 	private static final long serialVersionUID = 7103375498124675739L;
 
-	private List<String> targets;
-	private String jsonData;
+	private final List<String> targets;
+	private final String jsonData;
+	private final String keyword;
 
 	private RequestDTO(Builder builder) {
 		super(builder.id);
 		this.targets = builder.targets;
 		this.jsonData = builder.jsonData;
+		this.keyword = builder.keyword;
 	}
+	
+	
 
 	@Override
 	public String toString() {
-		return "RequestDTO [jsonData=" + jsonData + ", ID=" + getId() + "]";
+		return "RequestDTO [targets=" + targets + ", jsonData=" + jsonData + ", keyword=" + keyword + "]";
 	}
+
 
 	public List<String> getTarget() {
 		return targets;
 	}
 
+	public String getKeyword() {
+		return keyword;
+	}
+
+
+	public List<String> getTargets() {
+		return targets;
+	}
+
+	public String getJsonData() {
+		return jsonData;
+	}
+
+
+
 	public static class Builder {
 		private UUID id;
 		private List<String> targets = new ArrayList<String>();
 		private String jsonData;
+		private String keyword;
 
-		public Builder(UUID id, String jsonData) {
+		public Builder(UUID id, String jsonData, String keyword) {
 			this.id = id;
+			this.jsonData = jsonData;
+			this.keyword = keyword;
 		}
 
 		public Builder target(List<String> targets) {
@@ -50,6 +73,5 @@ public class RequestDTO extends BaseDTO {
 		}
 	}
 
-	// Getters, Setters and other methods can be added here
 
 }

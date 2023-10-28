@@ -4,9 +4,6 @@ import java.util.UUID;
 
 public class GreetingDTO extends BaseDTO {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -6355873389287758980L;
 	private String name;
 
